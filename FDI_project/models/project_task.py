@@ -7,5 +7,5 @@ class CrossoveredBudget(models.Model):
 
     parent_level_1_id = fields.Many2one('project.task',string='Parent Niveau 1',
                                         domain="[('project_id', '=', project_id)]")
-    parent_level_2_id = fields.Boolean('project.task',string='Parent Niveau 2',
+    parent_level_2_id = fields.Many2one('project.task',string='Parent Niveau 2',
                                        domain="[('project_id', '=', project_id)]")
